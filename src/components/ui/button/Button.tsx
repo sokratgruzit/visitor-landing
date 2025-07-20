@@ -21,13 +21,13 @@ const Button: React.FC<ButtonProps> = ({
     section = 0
 }) => {
     const handleClick = () => {
-        let timeout = setTimeout(() => {
+        const timeout = setTimeout(() => {
             if (onClick) onClick();
             clearTimeout(timeout);
         }, 1000);
     };
 
-    let lStyle: any = { background: bg, borderColor: borderColor };
+    let lStyle: React.CSSProperties = { background: bg, borderColor: borderColor };
 
     if (size === "regular") {
         lStyle = { 
