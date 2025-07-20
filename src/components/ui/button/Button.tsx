@@ -20,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
     delay = 0,
     section = 0
 }) => {
+    //Button logic
     const handleClick = () => {
         const timeout = setTimeout(() => {
             if (onClick) onClick();
