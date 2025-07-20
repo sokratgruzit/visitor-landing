@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.auth {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav a {
+    color: rgba(255, 255, 255, .3);
+}
