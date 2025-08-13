@@ -155,7 +155,13 @@ export const Landing: React.FC = () => {
                     >Посмотри Демо</motion.h1>
                     <Button
                         text="Демо"
-                        onClick={() => null}
+                        onClick={() => {
+                            const url = process.env.NEXT_PUBLIC_APP_URL;
+
+                            if (url) {
+                                window.location.href = `${url}/demo`;
+                            }
+                        }}
                         size={"large"}
                         borderColor="#EF9F64"
                         delay={1}
