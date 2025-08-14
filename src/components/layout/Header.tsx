@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import Button from "../ui/button/Button";
 
@@ -41,6 +42,9 @@ export const Header: React.FC = () => {
                         handleScroll("demo");
                     }}
                 >Демо</a>
+                <Link href="/product">
+                    Продукт
+                </Link>
             </nav>
             <div className={styles.auth}>
                 <Button
