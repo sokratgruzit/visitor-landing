@@ -9,6 +9,7 @@ import { Footer } from "../layout/Footer";
 import { Buy } from "../steps/Buy";
 import { Enter } from "../steps/Enter";
 import { Subscription } from "../steps/Subscription";
+import { Constructor } from "../steps/Constructor";
 
 import styles from "./Landing.module.css";
 
@@ -37,7 +38,7 @@ export const Landing: React.FC = () => {
                             duration: 1,
                             ease: "easeInOut"
                         }}
-                        style={{ textAlign: "start", willChange: "transform, opacity" }}
+                        style={{ willChange: "transform, opacity" }}
                     >Создай сайт-визитку или презентацию за 5 минут</motion.h1>
                     <motion.p 
                         className={`${styles.subtitle} texturedType`}
@@ -48,7 +49,7 @@ export const Landing: React.FC = () => {
                             delay: .3,
                             ease: "easeInOut"
                         }}
-                        style={{ textAlign: "start", willChange: "transform, opacity" }}
+                        style={{ willChange: "transform, opacity" }}
                     >Конструктор, с которым справится каждый</motion.p>
                     <div className={styles.cards}>
                         <motion.div
@@ -59,7 +60,7 @@ export const Landing: React.FC = () => {
                                 delay: .6,
                                 ease: "easeInOut"
                             }}
-                            style={{ textAlign: "start", willChange: "transform, opacity" }}
+                            style={{ willChange: "transform, opacity" }}
                             className={`${styles.card} ${styles.card1}`}
                         />
                         <motion.div
@@ -70,7 +71,7 @@ export const Landing: React.FC = () => {
                                 delay: .9,
                                 ease: "easeInOut"
                             }}
-                            style={{ textAlign: "start", willChange: "transform, opacity" }}
+                            style={{ willChange: "transform, opacity" }}
                             className={styles.card} 
                         />
                         <motion.div
@@ -81,7 +82,7 @@ export const Landing: React.FC = () => {
                                 delay: 1.2,
                                 ease: "easeInOut"
                             }}
-                            style={{ textAlign: "start", willChange: "transform, opacity" }}
+                            style={{ willChange: "transform, opacity" }}
                             className={`${styles.card} ${styles.card2}`}
                         />
                     </div>
@@ -95,7 +96,7 @@ export const Landing: React.FC = () => {
                             duration: 1,
                             ease: "easeInOut"
                         }}
-                        style={{ textAlign: "start", willChange: "transform, opacity" }}
+                        style={{ willChange: "transform, opacity" }}
                     >Как это работает</motion.h1>
                     <div className={styles.steps}>
                         {step === 0 && <motion.div 
@@ -116,9 +117,32 @@ export const Landing: React.FC = () => {
                                 }
                             }}
                         />}
+                        {step === 0 && <div className={styles.previewWrapper}>
+                            <motion.img
+                                key={0}
+                                src="/images/page0.png"
+                                alt={`Страница начать`}
+                                className={styles.previewPage}
+                                initial={{ opacity: 0, x: 50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -50 }}
+                                transition={{ duration: 0.5 }}
+                            />
+                        </div>}
                         {step === 1 && <Buy key={1} />}
                         {step === 2 && <Subscription key={2} />}
                         {step === 3 && <Enter key={3} />}
+                        {step === 4 && <Constructor key={4} />}
+                        {step === 5 && <div className={styles.previewWrapper}>
+                            <motion.div
+                                key={5}
+                                className={styles.linkPreview}
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0 }}
+                                transition={{ duration: 0.5, type: "spring", stiffness: 150, damping: 10 }}
+                            >{`${process.env.NEXT_PUBLIC_SITE_URL}/[слаг]`}</motion.div>
+                        </div>}
                         <Button
                             className="responsiveLeft"
                             onClick={() => step > 0 ? setStep(step - 1) : null}
@@ -151,7 +175,7 @@ export const Landing: React.FC = () => {
                             duration: 1,
                             ease: "easeInOut"
                         }}
-                        style={{ textAlign: "start", willChange: "transform, opacity" }}
+                        style={{ willChange: "transform, opacity" }}
                     >Посмотри Демо</motion.h1>
                     <Button
                         text="Демо"

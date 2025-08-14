@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    z-index: 100;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
@@ -22,4 +23,77 @@
 
 .nav a {
     color: rgba(255, 255, 255, .3);
+}
+
+@media (max-width: 1280px) {
+    .header {
+        padding: 0 15px;
+        height: 70px;
+    }
+
+    .nav {
+        gap: 8px;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+    }
+
+    .auth {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        height: 126px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .nav a {
+        font-size: 0.85rem;
+    }
+
+    .auth {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 440px) {
+    .header {
+        padding: 8px 10px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        gap: 4px;
+    }
+
+    .nav a {
+        font-size: 0.8rem;
+    }
+
+    .auth {
+        gap: 4px;
+    }
 }

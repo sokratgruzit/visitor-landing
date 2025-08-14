@@ -42,7 +42,6 @@
 .main {
     flex: 1;
     position: relative;
-    overflow-y: auto;
     margin-top: 20px;
     padding: 40px 20px;
     display: flex;

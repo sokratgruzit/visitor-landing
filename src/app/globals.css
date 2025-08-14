@@ -25,6 +25,30 @@
 
 body {
   font-family: 'Bloc', sans-serif;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Полоса скролла */
+body::-webkit-scrollbar {
+  width: 8px; /* толщина */
+}
+
+/* Фон полосы */
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+/* Сам ползунок */
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* При наведении на ползунок */
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 html, body {
