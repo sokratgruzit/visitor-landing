@@ -58,7 +58,7 @@ export default function ProductPage() {
                         animate={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 150, damping: 10, delay: 0.5 }}
                     >
-                        3300₽ / подписка
+                        800₽ / подписка
                     </motion.div>
 
                     <div className={styles.previewWrapper}>
