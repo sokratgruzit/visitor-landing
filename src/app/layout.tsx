@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: 'VisiTOR',
-  description: 'Landing page',
+  description: 'Конструктор презентаций и сайтов-визиток',
 };
 
 export default function RootLayout({

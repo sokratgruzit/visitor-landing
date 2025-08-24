@@ -87,7 +87,7 @@ export const Subscription: React.FC = () => {
                 animate={priceControls}
                 style={{ willChange: "transform, opacity" }}
             >
-                3300₽ / мес.
+                800₽ / мес.
             </motion.h1>
         </div>
     )

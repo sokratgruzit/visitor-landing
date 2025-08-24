@@ -1,8 +1,9 @@
 import { Landing } from "@/components/landing/Landing";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Создай сайт за 5 минут — VisiTOR',
   description: 'Конструктор сайтов-визиток и простых презентаций с красивой и живой анимацией.',
   openGraph: {

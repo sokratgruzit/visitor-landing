@@ -46,3 +46,13 @@
     right: 71px;
     transform: scale(0);
 }
+
+@media (max-width: 768px) {
+    .regBtn {
+        font-size: 2rem;
+        width: 300px;
+        height: 70px;
+        left: calc(50% - 150px);
+        top: calc(50% - 35px);
+    }
+}

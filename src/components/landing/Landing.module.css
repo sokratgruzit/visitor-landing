@@ -50,6 +50,19 @@
     overflow: hidden;
 }
 
+.hero3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 20px 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
 .title {
     font-size: 3rem;
     text-align: center;
@@ -144,6 +157,127 @@
     background-position: center;
 }
 
+.hero2{
+    padding: 60px 40px;
+    background: #0f0f0f;
+    color: #fff;
+}
+
+.horizontalTimeline {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    scroll-behavior: smooth;
+}
+
+.horizontalTimeline::-webkit-scrollbar {
+    height: 8px; /* толщина */
+}
+
+/* Фон полосы */
+.horizontalTimeline::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+/* Сам ползунок */
+.horizontalTimeline::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* При наведении на ползунок */
+.horizontalTimeline::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.timelineCard {
+    min-width: 220px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    flex-shrink: 0;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.stepNumber {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stepContent h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.stepContent p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.timelineWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.timelineRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 50%;
+    position: relative;
+}
+
+.circleWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 30px);
+    background: #0f0f0f;
+}
+
+.timelineCircle {
+    width: 60px;
+    height: 60px;
+    border: 4px solid;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.timelineLine {
+    width: 4px;
+    flex-shrink: 0;
+    margin-top: 0px;
+}
+
+.timelineContent {
+    background: rgba(255,255,255,0.05);
+    padding: 20px 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    margin-left: 80px;
+}
+
 @media (max-width: 1280px) {
     .main {
         margin-top: 70px;
@@ -151,6 +285,10 @@
 }
 
 @media (max-width: 768px) {
+    .timelineRow {
+        width: 100%;
+    }
+    
     .main {
         margin-top: 126px;
     }
@@ -162,8 +300,34 @@
     .subtitle {
         font-size: 1.5rem;
     }
+
+    .hero2 {
+        padding: 20px;
+    }
+
+    .timelineContent h3 {
+        font-size: 1rem;
+    }
+
+    .timelineContent p {
+        font-size: .75rem;
+    }
+
+    .pointerCircle {
+        width: 55px;
+        height: 55px;
+        bottom: -8px;
+        right: -8px;
+    }
+
+    .steps {
+        width: 100%;
+    }
+
+    .stepTitle,
+    .linkPreview {
+        font-size: 1.5rem;
+    }
 }
 
-@media (max-width: 440px) {
-    
-}
+

@@ -10,6 +10,8 @@ import { Buy } from "../steps/Buy";
 import { Enter } from "../steps/Enter";
 import { Subscription } from "../steps/Subscription";
 import { Constructor } from "../steps/Constructor";
+import { CustomAnimations } from "./CustomAnimations";
+import { FeatureProposalsAnimated } from "./FeatureProposalAnimated";
 
 import styles from "./Landing.module.css";
 
@@ -166,7 +168,9 @@ export const Landing: React.FC = () => {
                         />
                     </div>
                 </section>
-                <section id="demo" className={styles.hero}>
+                <CustomAnimations />
+                <FeatureProposalsAnimated />
+                <section id="demo" className={styles.hero3}>
                     <motion.h1 
                         className={`${styles.title} texturedType`}
                         initial={{ translateY: -50, opacity: 0 }}
